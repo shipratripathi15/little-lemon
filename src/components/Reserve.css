@@ -1,0 +1,49 @@
+#reserve{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary2);
+    padding: 40px;
+}
+#reserve .content h3{
+    font: var(--headerFont);
+    color: var(--primary1);
+}
+#reserve .content h4{
+    font: var(--subHeaderFont);
+    color: var(--secondaryColor1);
+}
+#reserve .content p{
+    font: var(--bodyFont);
+    color: var(--secondaryColor1);
+    max-width: 80%;
+    margin: 20px 0;
+}
+#reserve .content button{
+    font: var(--btnFont);
+    color: var(--secondaryColor2);
+    border-radius: var(--borderRadius);
+    background-color: var(--primary1);
+    padding: 10px 20px;
+    border: 0;
+    margin: 10px 0;
+}
+#reserve figure{
+    position: relative;
+}
+#reserve .food{
+    height: 340px;
+    top: 20px;
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+    border-radius: var(--borderRadius);
+    width: 250px;
+}
+@media only screen  and  (max-width:420px){
+    #reserve figure{
+        display: none;
+    }
+    #reserve .content p{
+        max-width: 100%;
+    }
+}

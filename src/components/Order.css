@@ -1,0 +1,74 @@
+#order{
+    margin-top: 100px;
+    padding: 40px;
+}
+#order .header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+#order .box-content{
+    padding: 20px;
+}
+#order .highlight{
+    color: red;
+    font-size: 16px;
+}
+#order .header h3{
+    font: var(--headerFont);
+    color: var(--secondaryColor2);
+}
+#order .header button{
+    font: var(--btnFont);
+    color: var(--secondaryColor2);
+    border-radius: var(--borderRadius);
+    background-color: var(--primary1);
+    padding: 10px 20px;
+    border: 0;
+    margin: 10px 0;
+}
+#order .body{
+    display: flex;
+    gap: 50px;
+}
+#order .body .header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: unset;
+}
+#order .body .content{
+    margin: 30px 0;
+}
+#order .body .box{
+    background-color: #F2F0F0;
+}
+#order .body .box button{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    border: 0;
+    align-items: center;
+    font: var(--btnFont);
+}
+#order .body .box figure img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+@media only screen  and  (max-width:420px){
+    #order{
+        margin-top: 0;
+    }
+    #order .header{
+        text-align: center;
+        flex-direction: column;
+    }
+    #order .body{
+        flex-direction: column;
+    }
+    #order .body .box button {
+        justify-content: space-evenly;
+        width: 100%;
+    }
+}

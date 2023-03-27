@@ -1,0 +1,36 @@
+nav{
+    grid-column: 2 / 3;
+    padding: 40px;
+    font: var(--bodyFont);
+    color: var(--secondaryColor);
+    font-size: var(--bodyFontSize);    
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+nav button{
+    background: transparent;
+    border: 0;
+    outline: 0;
+    display: none;
+}
+@media only screen  and  (max-width:420px){
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;  
+    }
+    nav button{
+        display: block;
+        align-self: flex-end;
+    }
+    nav ul{
+        display: none;
+    }
+}

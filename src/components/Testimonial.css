@@ -1,0 +1,34 @@
+#testimonial{
+    background-color: var(--primary1);
+    padding:60px 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+}
+#testimonial .box{
+    background-color: var(--primary2);
+    color: var(--secondaryColor1);
+    padding:40px;
+    font:var(--bodyFont)
+}
+#testimonial .box h4{
+    font: var(--subHeaderFont);
+}
+#testimonial .box h4 svg{
+    color: yellow;
+    height: 14px;
+    width: 14px;
+}
+#testimonial .box .profile{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+#testimonial .box p{
+    margin: 10px 0;
+}
+@media only screen  and  (max-width:420px){
+    #testimonial{
+        flex-direction: column;
+    }
+}
