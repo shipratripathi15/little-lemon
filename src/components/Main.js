@@ -4,8 +4,52 @@ import Specials from "./Specials";
 import CustomersSay from "./CustomersSay";
 import Chicago from "./Chicago";
 import { Route, Routes } from "react-router-dom";
+import BookaTable from "./BookaTable";
+import { useReducer, useState } from "react";
+import ConfirmedBooking from "./ConfirmedBooking";
 
 export default function Main() {
+  
+  const seededRandom = function (seed) {
+    var m = 2**35 - 31;
+    var a = 185852;
+    var s = seed % m;
+    return function () {
+        return (s = s * a % m) / m;
+    };
+  }
+
+  const fetchAPI = function(date) {
+      let result = [];
+      let random = seededRandom(date.getDate());
+
+      for(let i = 17; i <= 23; i++) {
+          if(random() < 0.5) {
+              result.push(i + ':00');
+          }
+          if(random() < 0.5) {
+              result.push(i + ':30');
+          }
+      }
+      return result;
+  };
+  const submitAPI = function(formData) {
+      return true;
+  };
+  
+  const initializeTimes = () => {
+    const date = new Date();
+    state.availableTimes = fetchAPI(date);
+    return state.availableTimes;
+  }
+  const updateTimes = (state, action) => {
+    const date = new Date(action);
+    state.availableTimes = fetchAPI(date);
+    return state;
+  }
+  const [state , dispatch] = useReducer(updateTimes, initializeTimes);
+  
+
   return (
     <main>
       <Routes> 
@@ -13,6 +57,10 @@ export default function Main() {
           <Route path="/specials" element={<Specials/>}></Route>
           <Route path="/testimonials" element={<CustomersSay/>}></Route>
           <Route path="/chicago" element={<Chicago/>}></Route>
+          <Route path="/confirmedbooking" element={<ConfirmedBooking/>}></Route>
+          <Route path="/bookatable" element={
+            <BookaTable times={initializeTimes()} dispatchEvent={dispatch}  submitFn={submitAPI}/>
+          }></Route>
       </Routes>
     </main>
   )

@@ -1,6 +1,7 @@
 import React from 'react'
+import { Link, Route, Routes } from 'react-router-dom';
 import food from "../assets/restauranfood.jpg";
-import CallToAction from './CallToAction';
+import BookaTable from './BookaTable';
 import "./Homepage.css"
 
 export default function Reserve() {
@@ -10,8 +11,7 @@ export default function Reserve() {
             <h3>Little Lemon</h3>
             <h4>Chicago</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consectetur dapibus eros id elementum. Maecenas pharetra felis sed vulputate posuere.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consectetur dapibus eros id elementum. Maecenas pharetra felis sed vulputate posuere.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consectetur dapibus eros id elementum. Maecenas pharetra felis sed vulputate posuere.</p>
-            <CallToAction />
-            
+            <Link  className="reserve" to="/bookatable" path="relative">Reserve a table</Link>
         </div>
         <figure>
             <img className="food" src={food} alt="Food" />

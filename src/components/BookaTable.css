@@ -1,0 +1,5 @@
+h2{
+    font: var(--headerFont);
+    color: var(--secondaryColor);
+    padding: 40px;
+}

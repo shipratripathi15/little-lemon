@@ -1,0 +1,14 @@
+.confirm{
+    padding: 40px;
+    margin-bottom:150px;
+    display: flex;
+    align-items: center;
+}
+.confirm .msg{
+    font:var(--headerFont);
+    color: var(--primary2);
+    background-color: #f4fffb;
+    padding: 20px;
+    border-radius: var(--borderRadius);
+    width:100%;
+}
