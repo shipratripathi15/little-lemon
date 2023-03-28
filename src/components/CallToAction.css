@@ -1,0 +1,9 @@
+.reserve{
+    font: var(--btnFont);
+    color: var(--secondaryColor2);
+    border-radius: var(--borderRadius);
+    background-color: var(--primary1);
+    padding: 10px 20px;
+    border: 0;
+    margin: 10px 0;
+}

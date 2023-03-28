@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Order.css"
+import "./Specials.css"
 import DirectionsBikeIcon from '@mui/icons-material/DirectionsBike';
 import greekSalad from "../assets/greek salad.jpg";
 import lemonDessert from "../assets/lemon dessert.jpg"

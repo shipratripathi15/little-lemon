@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Testimonial.css"
+import "./CustomersSay.css"
 import StarIcon from '@mui/icons-material/Star';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 

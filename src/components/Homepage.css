@@ -18,15 +18,6 @@
     max-width: 80%;
     margin: 20px 0;
 }
-#reserve .content button{
-    font: var(--btnFont);
-    color: var(--secondaryColor2);
-    border-radius: var(--borderRadius);
-    background-color: var(--primary1);
-    padding: 10px 20px;
-    border: 0;
-    margin: 10px 0;
-}
 #reserve figure{
     position: relative;
 }
