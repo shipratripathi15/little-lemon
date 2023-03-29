@@ -5,8 +5,9 @@ import CustomersSay from "./CustomersSay";
 import Chicago from "./Chicago";
 import { Route, Routes } from "react-router-dom";
 import BookaTable from "./BookaTable";
-import { useReducer, useState } from "react";
+import { useEffect, useReducer, useRef, useState } from "react";
 import ConfirmedBooking from "./ConfirmedBooking";
+import { BrowserRouter } from "react-router-dom";
 
 export default function Main() {
   
@@ -37,6 +38,8 @@ export default function Main() {
       return true;
   };
   
+ 
+  
   const initializeTimes = () => {
     const date = new Date();
     state.availableTimes = fetchAPI(date);
@@ -57,10 +60,10 @@ export default function Main() {
           <Route path="/specials" element={<Specials/>}></Route>
           <Route path="/testimonials" element={<CustomersSay/>}></Route>
           <Route path="/chicago" element={<Chicago/>}></Route>
-          <Route path="/confirmedbooking" element={<ConfirmedBooking/>}></Route>
           <Route path="/bookatable" element={
             <BookaTable times={initializeTimes()} dispatchEvent={dispatch}  submitFn={submitAPI}/>
           }></Route>
+          <Route path="/confirmedbooking" element={<ConfirmedBooking/>}></Route>
       </Routes>
     </main>
   )

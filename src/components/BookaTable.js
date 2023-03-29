@@ -1,5 +1,6 @@
 import "./BookaTable.css"
 import BookingForm from "./BookingForm"
+import { BrowserRouter } from "react-router-dom"
 function BookaTable({times, dispatchEvent, submitFn}) {
   return (
     <>
