@@ -1,13 +1,14 @@
 footer{
     grid-column: -1/1;
     background-color: var(--primary2);
-    color: var(--primary1);
-    padding: 40px;
+    color: var(--secondaryColor1);
+    padding: var(--default-padding);
+    
 }
 footer>div{
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
 }
 footer ul{
     list-style: none;
@@ -17,11 +18,11 @@ footer a{
 }
 footer img{
     object-fit: cover;
-    height: 230px;
+    height: 40px;
 }
 footer section:last-of-type ul{
     display: flex;
-    gap: 30px;
+    flex-direction: column;
 }
 @media only screen  and  (max-width:420px){
     footer>div {
@@ -33,8 +34,7 @@ footer section:last-of-type ul{
     }
     footer img {
         object-fit: cover;
-        height: 230px;
-        width: 100%;
+        height: 40px;
     }
     footer section{
         text-align: center;

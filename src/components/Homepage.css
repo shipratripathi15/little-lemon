@@ -2,7 +2,9 @@
     display: flex;
     justify-content: space-between;
     background-color: var(--primary2);
-    padding: 40px;
+    padding: var(--default-padding);
+    margin-bottom: 5vw;
+    align-items: center;
 }
 #reserve .content h3{
     font: var(--headerFont);
@@ -32,13 +34,11 @@
     position: relative;
 }
 #reserve .food{
-    height: 340px;
-    top: 20px;
+    height: 25vh;
     object-fit: cover;
-    position: absolute;
-    right: 0;
     border-radius: var(--borderRadius);
-    width: 250px;
+    width: 15vw;
+    min-width: 200px;
 }
 @media only screen  and  (max-width:420px){
     #reserve figure{
@@ -47,4 +47,5 @@
     #reserve .content p{
         max-width: 100%;
     }
+    
 }

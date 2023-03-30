@@ -1,15 +1,18 @@
 #testimonial{
     background-color: var(--primary1);
-    padding:60px 40px;
+    padding: var(--default-padding);
     display: flex;
     justify-content: space-between;
-    gap: 60px;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
 }
 #testimonial .box{
     background-color: var(--primary2);
     color: var(--secondaryColor1);
     padding:40px;
-    font:var(--bodyFont)
+    font:var(--bodyFont);
+    max-width: 400px;
 }
 #testimonial .box h4{
     font: var(--subHeaderFont);

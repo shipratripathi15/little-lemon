@@ -1,10 +1,14 @@
 #order{
-    padding: 40px;
+    padding: var(--default-padding);
 }
 #order .header{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 50px;
+    margin: 0 0 50px 0;
+    gap: 5vw;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0;
 }
 #order .box-content{
     padding: 20px;
@@ -29,6 +33,9 @@
 #order .body{
     display: flex;
     gap: 50px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 #order .body .header{
     display: flex;
@@ -40,6 +47,7 @@
 }
 #order .body .box{
     background-color: #F2F0F0;
+    max-width: 400px;
 }
 #order .body .box button{
     display: flex;

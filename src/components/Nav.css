@@ -1,14 +1,18 @@
 nav{
     grid-column: 2 / 3;
-    padding: 40px;
     font: var(--bodyFont);
     color: var(--secondaryColor);
-    font-size: var(--bodyFontSize);    
+    font-size: var(--bodyFontSize);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 nav ul{
     display: flex;
     list-style: none;
-    justify-content: space-between;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 a{
     text-decoration: none;
@@ -32,5 +36,25 @@ nav button{
     }
     nav ul{
         display: none;
+    }
+    nav ul.clicked{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        position: absolute;
+        background: var(--primary1);
+        top: 120px;
+        width: 100%;
+        right: 0;
+        font: var(--headerFont);
+        justify-content: flex-start;
+        align-items: self-start;
+        gap: 30px;
+        width: 100%;
+        z-index: 1;
+    }
+    nav ul.clicked li{
+        width: 100%;
+        padding: 0 20px;
     }
 }

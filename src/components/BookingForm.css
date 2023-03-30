@@ -1,9 +1,9 @@
 form{
-    display: grid;
-    max-width: 200px;
-    gap: 20px;
-    padding: 0 40px 40px 40px;
+    display: flex;
     font: var(--bodyFont);
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
 }
 form .formGroup {
     display: flex;
@@ -17,6 +17,8 @@ form input, form select{
     font:inherit;
     padding:5px 10px;
     width:100%;
+    border: 1px solid var(--secondaryColor2);
+    border-radius: var(--borderRadius);
 }
 form input[type=submit]{
     font: var(--btnFont);

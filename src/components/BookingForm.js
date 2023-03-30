@@ -8,8 +8,9 @@ function BookingForm({availableTimes,dispatchEvent,submitAPI}) {
     const [occasion, setOccasion] = useState("birthday");
     const timeRef = useRef();
     const navigate = useNavigate();
+    const today =  new Date();
     const handleSubmit = (e) =>{
-        e.preventDefault();
+         e.preventDefault();
         const formData = {
             date: date,
             time: timeRef.current.value,
@@ -22,8 +23,8 @@ function BookingForm({availableTimes,dispatchEvent,submitAPI}) {
             navigate("/confirmedbooking")
         }
     }
-    const validateForm = () =>{
-        return (date !== '' && noOfGuests > 0 && timeRef.current.value !== "" && occasion !== "" )
+    const validateForm = () =>{     
+        return (date !== '' && new Date(date) < new Date() && noOfGuests > 0 && timeRef.current.value !== "" && occasion !== "" )
     }
     const handleDate = (e) =>{
         if(e.target.value){
@@ -45,6 +46,7 @@ function BookingForm({availableTimes,dispatchEvent,submitAPI}) {
             <label htmlFor="res-date">Choose date</label>
             <input type="date" id="res-date" value={date} onChange={handleDate} />
         </div>
+        {date !== '' && new Date(date) < new Date() && <p style={errorStyle}>Please select a date in future.</p>}
         <div className="formGroup">
             <label htmlFor="res-time">Choose time</label>
             <select id="res-time" ref={timeRef} role="combobox">

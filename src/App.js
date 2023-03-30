@@ -8,8 +8,10 @@ import { BrowserRouter } from "react-router-dom";
 function App() {
   return (
     <div className="wrapper">
-      <Header />
-      <Nav />
+      <div className='header'>
+        <Header />
+        <Nav />
+      </div>
       <Main />
       <Footer />
     </div>

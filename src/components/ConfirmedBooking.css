@@ -1,8 +1,9 @@
 .confirm{
-    padding: 40px;
+    padding: var(--default-padding);
     margin-bottom:150px;
     display: flex;
     align-items: center;
+    flex-direction: column;
 }
 .confirm .msg{
     font:var(--headerFont);
@@ -11,4 +12,13 @@
     padding: 20px;
     border-radius: var(--borderRadius);
     width:100%;
+}
+.confirm a{
+    font: var(--btnFont);
+    background: var(--primary1);
+    color: var(--secondaryColor2);
+    border: 0;
+    border-radius: var(--borderRadius);
+    padding:10px;
+    text-decoration: none;
 }
